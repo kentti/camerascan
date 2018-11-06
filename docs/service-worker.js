@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/camerascan/precache-manifest.b5e72556c0cc70ae36227a725665dd81.js"
+  "/camerascan/precache-manifest.823512dd955a6ab40ad35b3c3f39b043.js"
 );
 
 workbox.clientsClaim();
