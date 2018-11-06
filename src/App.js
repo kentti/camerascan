@@ -6,11 +6,26 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { errorMsg: '' };
+    this.state = { errorMsg: '', height: 0, width: 0 };
+
+    this.updateWindowDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
   }
 
   getUserMediaError() {
     this.setState({ errorMsg: 'Unfortunately getUserMedia function from  Stream API is not available on your device/browser. If using iOS, try the app with Safari.' });
+  }
+
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
 
   renderError() {
@@ -26,10 +41,14 @@ class App extends Component {
   }
 
   render() {
+    const { width, height } = this.state;
+
+    if (!width || !height) return null;
+
     const videoConstraints = {
       facingMode: { exact: "environment" },
-      height: window.innerHeight,
-      width: window.innerWidth,
+      width,
+      height,
       audio: false,
       onUserMediaError: this.getUserMediaError,
     };
@@ -37,7 +56,11 @@ class App extends Component {
     return (
       <span>
         { this.renderError() }
-        <Webcam videoConstraints={videoConstraints} />
+        <Webcam
+          height={height}
+          width={width}
+          videoConstraints={videoConstraints}
+        />
       </span>
     );
   }
