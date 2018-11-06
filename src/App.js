@@ -13,13 +13,8 @@ class App extends Component {
 
   componentDidMount() {
     this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
   }
   
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-
   getUserMediaError() {
     this.setState({ errorMsg: 'Unfortunately getUserMedia function from  Stream API is not available on your device/browser. If using iOS, try the app with Safari.' });
   }
@@ -54,7 +49,7 @@ class App extends Component {
     };
 
     return (
-      <span>
+      <span style={{ display: "block" }}>
         { this.renderError() }
         <Webcam
           height={height}
