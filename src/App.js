@@ -6,35 +6,42 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    // this.state = { errorMsg: '', height: 0, width: 0 };
+    this.state = { height: 0, width: 0 };
 
-    // this.updateWindowDimensions.bind(this);
+    this.updateWindowDimensions.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.updateWindowDimensions();
-  // }
+  componentDidMount() {
+    this.updateWindowDimensions();
+  }
   
-  // updateWindowDimensions() {
-  //   this.setState({ width: window.innerWidth, height: window.innerHeight });
-  // }
+  updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
 
   render() {
-    // const { width, height } = this.state;
+    const { width, height } = this.state;
 
-    // if (!width || !height) return null;
+    if (!width || !height) return null;
 
     const videoConstraints = {
       facingMode: { exact: "environment" },
-      // width,
-      // height,
+      width: width,
+      height: height,
       audio: false,
     };
 
+    const style = {
+      display: 'block',
+      width: width,
+      height: height,
+    }
+
     return (
       <Webcam
-        // height={height}
-        // width={width}
+        style={style}
+        width={width}
+        height={height}
         videoConstraints={videoConstraints}
       />
     );

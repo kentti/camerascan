@@ -1,13 +1,13 @@
 {
-  "main.css": "/camerascan/static/css/main.211810f0.chunk.css",
-  "main.js": "/camerascan/static/js/main.cd3bb15c.chunk.js",
-  "main.js.map": "/camerascan/static/js/main.cd3bb15c.chunk.js.map",
-  "static/js/1.d7fe1f4d.chunk.js": "/camerascan/static/js/1.d7fe1f4d.chunk.js",
-  "static/js/1.d7fe1f4d.chunk.js.map": "/camerascan/static/js/1.d7fe1f4d.chunk.js.map",
+  "main.css": "/camerascan/static/css/main.ea7d38e9.chunk.css",
+  "main.js": "/camerascan/static/js/main.27207863.chunk.js",
+  "main.js.map": "/camerascan/static/js/main.27207863.chunk.js.map",
+  "static/js/1.2b546add.chunk.js": "/camerascan/static/js/1.2b546add.chunk.js",
+  "static/js/1.2b546add.chunk.js.map": "/camerascan/static/js/1.2b546add.chunk.js.map",
   "runtime~main.js": "/camerascan/static/js/runtime~main.2b5e1340.js",
   "runtime~main.js.map": "/camerascan/static/js/runtime~main.2b5e1340.js.map",
-  "static/css/main.211810f0.chunk.css.map": "/camerascan/static/css/main.211810f0.chunk.css.map",
+  "static/css/main.ea7d38e9.chunk.css.map": "/camerascan/static/css/main.ea7d38e9.chunk.css.map",
   "index.html": "/camerascan/index.html",
-  "precache-manifest.823512dd955a6ab40ad35b3c3f39b043.js": "/camerascan/precache-manifest.823512dd955a6ab40ad35b3c3f39b043.js",
+  "precache-manifest.8ffc1ba7113abf40c04583ff6a632f0b.js": "/camerascan/precache-manifest.8ffc1ba7113abf40c04583ff6a632f0b.js",
   "service-worker.js": "/camerascan/service-worker.js"
 }
